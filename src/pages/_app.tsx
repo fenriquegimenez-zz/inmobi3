@@ -3,6 +3,8 @@ import type { AppProps /*, AppContext */ } from "next/app"
 
 import "../database/firebase"
 import "bootswatch/dist/flatly/bootstrap.min.css"
+import { ToastContainer } from "react-toastify"
+import "react-toastify/dist/ReactToastify.css"
 
 import Layout from "../components/layout/Layout"
 
@@ -10,6 +12,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <Layout>
       <Component {...pageProps} />
+      <ToastContainer />
     </Layout>
   )
 }
